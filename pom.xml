@@ -2,15 +2,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
+	<properties>
+		<app-version>0.0.1-SNAPSHOT</app-version>
+		<h2db-version>2.3.230</h2db-version>
+		<jetbrains-version>24.1.0</jetbrains-version>
+		<spring-doc-version>2.6.0</spring-doc-version>
+		<java.version>22</java.version>
+	</properties>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>ru.dart69</groupId>
 	<artifactId>inamoratas</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${app-version}</version>
 	<name>inamoratas</name>
 	<description>The API is designed for the purpose of searching for significant others</description>
 	<url/>
@@ -26,9 +36,7 @@
 		<tag/>
 		<url/>
 	</scm>
-	<properties>
-		<java.version>22</java.version>
-	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -57,7 +65,18 @@
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
-			<version>2.3.230</version>
+			<version>${h2db-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jetbrains</groupId>
+			<artifactId>annotations</artifactId>
+			<version>${jetbrains-version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>${spring-doc-version}</version>
 		</dependency>
 	</dependencies>
 
